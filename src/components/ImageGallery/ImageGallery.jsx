@@ -22,7 +22,7 @@ ImageGallery.prototype = {
   images: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
-      description: PropTypes.string,
+      description: PropTypes.string.isRequired,
       smallImage: PropTypes.string.isRequired,
       largeImage: PropTypes.string.isRequired,
     })

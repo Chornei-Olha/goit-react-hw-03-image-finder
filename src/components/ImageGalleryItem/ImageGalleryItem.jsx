@@ -10,7 +10,7 @@ function ImageGalleryItem({ description, smallImage, largeImage, openModal }) {
 }
 
 ImageGalleryItem.prototype = {
-  description: PropTypes.string,
+  description: PropTypes.string.isRequired,
   smallImage: PropTypes.string.isRequired,
   largeImage: PropTypes.string.isRequired,
   openModal: PropTypes.func.isRequired,
