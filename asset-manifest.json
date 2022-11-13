@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Chornei-Olha/goit-react-hw-03-image-finder/static/css/main.7acaea2f.css",
-    "main.js": "/Chornei-Olha/goit-react-hw-03-image-finder/static/js/main.07d3183d.js",
+    "main.css": "/Chornei-Olha/goit-react-hw-03-image-finder/static/css/main.6563f63a.css",
+    "main.js": "/Chornei-Olha/goit-react-hw-03-image-finder/static/js/main.c92fe2fd.js",
     "index.html": "/Chornei-Olha/goit-react-hw-03-image-finder/index.html",
-    "main.7acaea2f.css.map": "/Chornei-Olha/goit-react-hw-03-image-finder/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/Chornei-Olha/goit-react-hw-03-image-finder/static/js/main.07d3183d.js.map"
+    "main.6563f63a.css.map": "/Chornei-Olha/goit-react-hw-03-image-finder/static/css/main.6563f63a.css.map",
+    "main.c92fe2fd.js.map": "/Chornei-Olha/goit-react-hw-03-image-finder/static/js/main.c92fe2fd.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.6563f63a.css",
+    "static/js/main.c92fe2fd.js"
   ]
 }
