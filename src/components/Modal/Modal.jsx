@@ -22,14 +22,14 @@ class Modal extends Component {
     window.removeEventListener('keydown', this.handleKeyDown);
   }
 
-  handleClickBackdrop = e => {
-    if (e.target === e.currentTarget) {
+  handleKeyDown = e => {
+    if (e.code === 'Escape') {
       this.props.onClose();
     }
   };
 
-  handleKeyDown = e => {
-    if (e.code === 'Escape') {
+  handleClickBackdrop = e => {
+    if (e.target === e.currentTarget) {
       this.props.onClose();
     }
   };
