@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Chornei-Olha/goit-react-hw-03-image-finder/static/css/main.4ebb3977.css",
-    "main.js": "/Chornei-Olha/goit-react-hw-03-image-finder/static/js/main.f1e387f7.js",
+    "main.js": "/Chornei-Olha/goit-react-hw-03-image-finder/static/js/main.6a353c62.js",
     "index.html": "/Chornei-Olha/goit-react-hw-03-image-finder/index.html",
     "main.4ebb3977.css.map": "/Chornei-Olha/goit-react-hw-03-image-finder/static/css/main.4ebb3977.css.map",
-    "main.f1e387f7.js.map": "/Chornei-Olha/goit-react-hw-03-image-finder/static/js/main.f1e387f7.js.map"
+    "main.6a353c62.js.map": "/Chornei-Olha/goit-react-hw-03-image-finder/static/js/main.6a353c62.js.map"
   },
   "entrypoints": [
     "static/css/main.4ebb3977.css",
-    "static/js/main.f1e387f7.js"
+    "static/js/main.6a353c62.js"
   ]
 }
