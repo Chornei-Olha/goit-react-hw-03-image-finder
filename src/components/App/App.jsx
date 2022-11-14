@@ -16,19 +16,19 @@ class App extends Component {
     totalImages: 0,
     isLoading: false,
     showModal: false,
-    images: null,
+    images: [],
     error: null,
     currentImageUrl: null,
     currentImageDescription: null,
   };
 
   componentDidUpdate(prevProps, prevState) {
-    const { query } = this.state;
+    const { query, page } = this.state;
 
-    if (prevState.query !== query) {
+    if (prevState.query !== query || prevState.page !== page) {
       this.setState(({ isLoading }) => ({ isLoading: !isLoading }));
 
-      fetchImages(query)
+      fetchImages(query, this.state.page)
         .then(({ hits, totalHits }) => {
           const imagesArray = hits.map(hit => ({
             id: hit.id,
@@ -36,11 +36,15 @@ class App extends Component {
             smallImage: hit.webformatURL,
             largeImage: hit.largeImageURL,
           }));
-
+          console.log(this.state.images);
+console.log(hits)
+          console.log(this.state.imagesArray);
+          
           return this.setState(({ images, imagesOnPage }) => ({
-              images: imagesArray,
-              imagesOnPage: imagesOnPage + imagesArray.length,
+            images: [...images, ...imagesArray],
+            imagesOnPage: imagesOnPage + imagesArray.length,
             totalImages: totalHits,
+            isLoading: false,
           }));
         })
         .catch(error => this.setState({ error }))
@@ -66,13 +70,11 @@ class App extends Component {
     const currentImageUrl = e.target.dataset.large;
     const currentImageDescription = e.target.alt;
 
-    if (e.target.nodeName === 'IMG') {
       this.setState(({ showModal }) => ({
         showModal: !showModal,
         currentImageUrl: currentImageUrl,
         currentImageDescription: currentImageDescription,
       }));
-    }
   };
 
   render() {
