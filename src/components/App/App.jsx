@@ -38,10 +38,8 @@ class App extends Component {
           }));
 
           return this.setState(({ images, imagesOnPage }) => ({
-              images: [...images, ...imagesArray],
+              images: imagesArray,
               imagesOnPage: imagesOnPage + imagesArray.length,
-            // images: imagesArray,
-            // imagesOnPage: imagesArray.length,
             totalImages: totalHits,
           }));
         })

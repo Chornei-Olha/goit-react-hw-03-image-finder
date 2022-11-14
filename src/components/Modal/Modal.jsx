@@ -8,9 +8,9 @@ const modalRoot = document.querySelector('#modal-root');
 
 class Modal extends Component {
   static propTypes = {
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     onClose: PropTypes.func.isRequired,
-    currentImageUrl: PropTypes.string.isRequired,
+    currentImageUrl: PropTypes.string,
     currentImageDescription: PropTypes.string.isRequired,
   };
 
