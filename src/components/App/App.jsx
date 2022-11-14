@@ -23,7 +23,7 @@ class App extends Component {
   };
 
   componentDidUpdate(prevProps, prevState) {
-    const { query, page } = this.state;
+    const { query } = this.state;
 
     if (prevState.query !== query) {
       this.setState(({ isLoading }) => ({ isLoading: !isLoading }));
@@ -37,37 +37,13 @@ class App extends Component {
             largeImage: hit.largeImageURL,
           }));
 
-          return this.setState({
-            page: 1,
-            images: imagesArray,
-            imagesOnPage: imagesArray.length,
-            totalImages: totalHits,
-          });
-        })
-        .catch(error => this.setState({ error }))
-        .finally(() =>
-          this.setState(({ isLoading }) => ({ isLoading: !isLoading }))
-        );
-    }
-
-    if (prevState.page !== page && page !== 1) {
-      this.setState(({ isLoading }) => ({ isLoading: !isLoading }));
-
-      fetchImages(query, page)
-        .then(({ hits }) => {
-          const imagesArray = hits.map(hit => ({
-            id: hit.id,
-            description: hit.tags,
-            smallImage: hit.webformatURL,
-            largeImage: hit.largeImageURL,
-          }));
-
-          return this.setState(({ images, imagesOnPage }) => {
-            return {
+          return this.setState(({ images, imagesOnPage }) => ({
               images: [...images, ...imagesArray],
               imagesOnPage: imagesOnPage + imagesArray.length,
-            };
-          });
+            // images: imagesArray,
+            // imagesOnPage: imagesArray.length,
+            totalImages: totalHits,
+          }));
         })
         .catch(error => this.setState({ error }))
         .finally(() =>
