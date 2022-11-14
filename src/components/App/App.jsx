@@ -48,8 +48,8 @@ console.log(hits)
           }));
         })
         .catch(error => this.setState({ error }))
-        .finally(() =>
-          this.setState(({ isLoading }) => ({ isLoading: !isLoading }))
+         .finally(() =>
+          this.setState(({ isLoading }) => ({ isLoading: false }))
         );
     }
   }
