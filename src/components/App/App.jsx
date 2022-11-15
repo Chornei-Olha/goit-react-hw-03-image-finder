@@ -55,7 +55,7 @@ console.log(hits)
   }
 
   getSearchRequest = query => {
-    this.setState({ query });
+    this.setState({ query: query, page: 1, images: [] });
   };
 
   onNextFetch = () => {
