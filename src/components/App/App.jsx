@@ -36,9 +36,6 @@ class App extends Component {
             smallImage: hit.webformatURL,
             largeImage: hit.largeImageURL,
           }));
-          console.log(this.state.images);
-console.log(hits)
-          console.log(this.state.imagesArray);
           
           return this.setState(({ images, imagesOnPage }) => ({
             images: [...images, ...imagesArray],
