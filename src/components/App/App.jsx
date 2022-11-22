@@ -12,11 +12,11 @@ class App extends Component {
   state = {
     query: '',
     page: 1,
-    imagesOnPage: 0,
+    images: [],
     totalImages: 0,
+    imagesOnPage: 0,
     isLoading: false,
     showModal: false,
-    images: [],
     error: null,
     currentImageUrl: null,
     currentImageDescription: null,
